@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(1600, 1200);
+  createCanvas(800, 600);
   //noFill();
   fill(255);
   stroke(0);
@@ -17,15 +17,15 @@ function draw() {
   background(128);
   
   translate(width/2, height/2); // move the origin to the center of the screen
-  
+  //print("X: "+mouseX+", Y: "+mouseY);
   beginShape();
   for (let theta = 0.0; theta <= 2*PI; theta+=0.01){
     let rad = r(
     theta,
-    2, // a
-    2, // b
+    2.5, // a
+    2.5, // b
     4,// m
-    map(mouseX, 0, width, 0.1, 1, true), // n1
+    map(mouseX, width+462, 0, 0.09, 1, true), // n1, also 462 is just a nice limit that I found
     sin(t)*0.2+random(map(mouseY, 0, height, 0.3, 0.8, true), 0.9), // n2
     sin(t)*0.2+0.9 // n3
     ); // separated out for readability
