@@ -10,6 +10,7 @@ let flowfield = [];
 
 function setup() {
   createCanvas(800, 600);
+  background(0);
   cols = floor(width/scl);
   rows = floor(height/scl);
   fr = createP('');
@@ -22,18 +23,19 @@ function setup() {
 }
 
 function draw() {
+//   background(0);
   let yoff = 0;
   for(let y = 0; y < rows; y++){
     let xoff = 0;
     for(let x = 0; x < cols; x++){
 	  let index = (x+y*cols);
-      let angle = noise(xoff, yoff, zoff)*TWO_PI*4;
+      let angle = noise(xoff, yoff, zoff)*TAU*4;
 	  let v = p5.Vector.fromAngle(angle);
 	  v.setMag(1);
 	  flowfield[index] = v;
       xoff+=inc;
-	  stroke(0, 50);
-	  strokeWeight(1);
+	//   stroke(255);
+	//   strokeWeight(1);
 	//   push();
 	//   translate(x*scl, y*scl);
 	//   rotate(v.heading());
@@ -42,6 +44,10 @@ function draw() {
     }
     yoff+=inc;
 	zoff+=0.003;
+  }
+
+  if(frameCount >= 1336){
+	  noLoop;
   }
 
   for(let i = 0; i < particles.length; i++){
@@ -53,3 +59,7 @@ function draw() {
 
   fr.html(floor(frameRate()));
 }
+
+// function keyTyped(){
+//   if(key === 's') saveCanvas('rorschach', 'png');
+// }

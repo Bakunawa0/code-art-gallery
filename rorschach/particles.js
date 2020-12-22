@@ -2,7 +2,7 @@ function Particle() {
 	this.pos = createVector(random(width), random(height));
 	this.vel = createVector(0, 0);
 	this.acc = createVector(0, 0);
-	this.maxSpeed = 4;
+	this.maxSpeed = random(2, 5);
 
 	this.prevPos = this.pos.copy();
 
@@ -26,7 +26,7 @@ function Particle() {
 	}
 
 	this.show = function(){
-		stroke(0, 1);
+		stroke(random(250, 255), 0.7);
 		strokeWeight(1);
 		line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
 		//point(this.pos.x, this.pos.y);
