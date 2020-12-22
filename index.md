@@ -7,3 +7,5 @@ Pieces are dated DD/MM/YYYY
 19/12/2020 - ["Weave"](https://bakunawa0.github.io/code-art-gallery/WeaveJS/)
 
 20/12/2020 - ["Provoke"](https://bakunawa0.github.io/code-art-gallery/Provoke/) **INTERACTIVE** Moving your mouse alters the form in interesting ways
+
+23/12/2020 - ["Rorschach"](https://bakunawa0.github.io/code-art-gallery/rorschach/)
