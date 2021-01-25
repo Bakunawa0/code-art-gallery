@@ -9,3 +9,5 @@ Pieces are dated DD/MM/YYYY
 20/12/2020 - ["Provoke"](https://bakunawa0.github.io/code-art-gallery/Provoke/) **INTERACTIVE** Moving your mouse alters the form in interesting ways
 
 23/12/2020 - ["Rorschach"](https://bakunawa0.github.io/code-art-gallery/rorschach/)
+
+26/01/2021 - ["Self"](https://bakunawa0.github.io/code-art-gallery/Self/)
